@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #8d56fd;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  height: 100%;
+  margin: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.songlist-container,
+.playlist-container {
+  height: 95%;
+  margin: 30px auto;
+  border: 1px solid #ccc;
+  flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.playlist-header-container {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+h1 {
+  margin: 0;
+}
+
+.input-container {
+  height: 80px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.input-container label {
+  font-size: 1.2rem;
+}
+
+.input-container input {
+  margin-left: 1rem;
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-results-container,
+.playlist-songs-container {
+  height: calc(100% - 100px);
+  padding: 1rem;
+  overflow: scroll;
+}
+
+.message {
+  flex: 1;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 1.2rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: var(--primary-color);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+table td {
+  width: 33%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  font-size: 0.8rem;
+  width: 80px;
+  background-color: #1abc9c;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+input:focus,
+button:focus {
+  outline: none;
 }
